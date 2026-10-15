@@ -265,6 +265,12 @@ address {
 .wordmark--light {
   color: #fff;
 }
+.wordmark__mark--chip {
+  background: #fff;
+  border-radius: 10px;
+  padding: 3px;
+  box-sizing: content-box;
+}
 .nav__links {
   display: flex;
   gap: 28px;
@@ -356,11 +362,80 @@ address {
   gap: 12px;
 }
 .hero-art {
-  width: 118%;
-  max-width: none;
-  margin-right: -18%;
-  align-self: end;
+  position: relative;
+  justify-self: center;
+  width: min(440px, 100%);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  margin: 40px 0;
+}
+.hero-art__disc {
+  position: relative;
+  z-index: 1;
+  width: 78%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.6);
+  animation: logo-in 0.9s cubic-bezier(0.2, 0.9, 0.3, 1.2) both, logo-float 6s ease-in-out 1s infinite;
+}
+.hero-art__logo {
+  width: 64%;
   height: auto;
+}
+.hero-art__ring {
+  position: absolute;
+  width: 78%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid rgba(188, 211, 240, 0.55);
+  animation: ring 3.6s ease-out 1s infinite;
+}
+.hero-art__ring--late {
+  animation-delay: 2.8s;
+}
+.hero-art__pill {
+  overflow: visible;
+  position: absolute;
+  width: 34%;
+  left: -4%;
+  top: 14%;
+  z-index: 2;
+}
+.hero-art__tab {
+  position: absolute;
+  width: 18%;
+  right: 2%;
+  bottom: 4%;
+  z-index: 2;
+}
+@keyframes logo-in {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+}
+@keyframes logo-float {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -10px;
+  }
+}
+@keyframes ring {
+  from {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  to {
+    transform: scale(1.35);
+    opacity: 0;
+  }
 }
 
 /* transfer strip */
@@ -918,6 +993,11 @@ address {
   position: relative;
   overflow: hidden;
 }
+@media (min-width: 901px) {
+  .phero__inner {
+    padding-right: 320px !important;
+  }
+}
 .phero__inner {
   padding: 64px 24px 72px;
   position: relative;
@@ -937,10 +1017,21 @@ address {
 }
 .phero__shape {
   position: absolute;
-  right: -60px;
-  top: -40px;
-  width: 340px;
-  opacity: 0.95;
+  right: 6%;
+  top: 50%;
+  translate: 0 -50%;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  opacity: 0.97;
+  box-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.6);
+}
+.phero__shape svg {
+  width: 62%;
+  height: auto;
 }
 .crumbs {
   font-size: 0.9rem;
@@ -1425,9 +1516,8 @@ address {
     padding: 48px 0 8px;
   }
   .hero-art {
-    width: 100%;
-    margin: 0 0 -6px auto;
-    max-width: 420px;
+    width: min(300px, 80%);
+    margin: 24px auto 48px;
   }
   .equation__row {
     grid-template-columns: 1fr;
@@ -1532,10 +1622,7 @@ address {
     grid-template-columns: 1fr;
   }
   .phero__shape {
-    width: 200px;
-    right: -70px;
-    top: -30px;
-    opacity: 0.5;
+    display: none;
   }
   .footer__grid {
     grid-template-columns: 1fr;
@@ -1603,11 +1690,6 @@ address {
 }
 
 /* hero motion: the heartbeat draws in, pills drift */
-.hero-art .beat {
-  stroke-dasharray: 1100;
-  stroke-dashoffset: 1100;
-  animation: beat-draw 1.8s cubic-bezier(0.6, 0, 0.3, 1) 0.3s forwards, beat-pulse 3.2s ease-in-out 2.4s infinite;
-}
 .hero-art .float-a {
   animation: drift 7s ease-in-out infinite;
 }
@@ -1639,9 +1721,6 @@ address {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-art .beat {
-    stroke-dashoffset: 0;
-  }
   * {
     animation: none !important;
     transition: none !important;

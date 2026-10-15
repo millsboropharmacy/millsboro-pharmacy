@@ -1,39 +1,28 @@
+import { LogoMark } from "./Logo";
 // Geometric art built from the logo's own shapes (cross arms, heartbeat) plus a capsule.
 // No stock photos: the store isn't open yet, so nothing here pretends to be a real photo.
 
 export function HeroArt() {
+  // The real logo on a white disc, with a soft pulse ring and two drifting pills.
+  // .hero-art also gets the scroll parallax from ScrollFx.
   return (
-    <svg className="hero-art" viewBox="0 0 560 520" aria-hidden="true" focusable="false">
-      {/* tall cross arm */}
-      <rect x="250" y="40" width="190" height="560" rx="44" fill="#2B5598" />
-      {/* red cross arm running off the edge */}
-      <rect x="120" y="200" width="520" height="170" rx="40" fill="#C0212B" />
-      {/* overlap shade keeps the cross reading as one shape */}
-      <rect x="250" y="200" width="190" height="170" fill="#9E1B24" />
-      {/* capsule */}
-      <g className="float-a">
-      <g transform="rotate(-32 140 120)">
-        <rect x="40" y="82" width="200" height="76" rx="38" fill="#F7F3EA" />
-        <path d="M140 82h62a38 38 0 0 1 0 76h-62z" fill="#BCD3F0" />
-        <line x1="140" y1="82" x2="140" y2="158" stroke="#0F2447" strokeOpacity=".15" strokeWidth="3" />
-      </g>
-      </g>
-      {/* heartbeat */}
-      <polyline
-        className="beat"
-        points="0,286 210,286 262,206 330,372 398,206 448,286 560,286"
-        fill="none"
-        stroke="#F7F3EA"
-        strokeWidth="22"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      {/* tablet */}
-      <g className="float-b">
-        <circle cx="120" cy="440" r="56" fill="#BCD3F0" />
-        <line x1="80" y1="480" x2="160" y2="400" stroke="#1B3A6B" strokeWidth="10" strokeLinecap="round" />
-      </g>
-    </svg>
+    <div className="hero-art" aria-hidden="true">
+      <span className="hero-art__ring" />
+      <span className="hero-art__ring hero-art__ring--late" />
+      <div className="hero-art__disc">
+        <LogoMark size={260} className="hero-art__logo" />
+      </div>
+      <svg className="hero-art__pill float-a" viewBox="0 0 200 80">
+        <g transform="rotate(-32 100 40)">
+          <rect x="0" y="2" width="200" height="76" rx="38" fill="#F7F3EA" />
+          <path d="M100 2h62a38 38 0 0 1 0 76h-62z" fill="#BCD3F0" />
+        </g>
+      </svg>
+      <svg className="hero-art__tab float-b" viewBox="0 0 112 112">
+        <circle cx="56" cy="56" r="56" fill="#BCD3F0" />
+        <line x1="16" y1="96" x2="96" y2="16" stroke="#1B3A6B" strokeWidth="10" strokeLinecap="round" />
+      </svg>
+    </div>
   );
 }
 

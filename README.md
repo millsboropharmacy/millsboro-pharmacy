@@ -33,6 +33,9 @@ In the existing Vercel project: Settings > Git, connect this repo. The domain st
 ## Fonts
 Fraunces (headlines) and Inter (everything else), the same faces as the original site, self-hosted via Fontsource.
 
+## Logo
+`lib/logo.ts` holds the pharmacy's own logo, vector-traced from their original logo file (app/icon.png in the old repo). Also saved as `public/logo.svg`.
+
 ## Icons
 No photos (Dhruv's call). Line-icon decals live in `components/Icons.tsx`; each service picks one in `lib/site.ts`.
 

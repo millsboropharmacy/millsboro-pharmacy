@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { LOGO_NAVY, LOGO_RED, LOGO_VIEWBOX, LOGO_WHITE } from "@/lib/logo";
 
 // Link preview card (iMessage, Facebook, Google, etc.): the logo front and center.
 export const dynamic = "force-static";
@@ -32,17 +33,10 @@ export default function OgImage() {
             flexShrink: 0,
           }}
         >
-          <svg width="270" height="265" viewBox="55 15 300 295">
-            <rect x="62" y="100" width="288" height="122" rx="24" fill="#C0212B" />
-            <rect x="140" y="20" width="130" height="285" rx="30" fill="#1B3A6B" />
-            <polyline
-              points="100,161 138,161 166,109 205,220 244,109 272,161 312,161"
-              fill="none"
-              stroke="#FFFFFF"
-              strokeWidth="19"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
+          <svg width="270" height="270" viewBox={LOGO_VIEWBOX}>
+            <path fill="#FFFFFF" fillRule="evenodd" d={LOGO_WHITE} />
+            <path fill="#C0212B" fillRule="evenodd" d={LOGO_RED} />
+            <path fill="#1B3A6B" fillRule="evenodd" d={LOGO_NAVY} />
           </svg>
         </div>
         <div style={{ display: "flex", flexDirection: "column", marginLeft: 70, color: "#FFFFFF" }}>

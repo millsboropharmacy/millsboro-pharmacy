@@ -27,6 +27,9 @@ The old site's `app/api/send` route (Resend to Gmail with license and insurance 
 ## Going live on Dhruv's Vercel
 In the existing Vercel project: Settings > Git, connect this repo. The domain stays the same. `/contact` redirects to `/contact-us`.
 
+## Fonts
+Fraunces (headlines) and Inter (everything else), the same faces as the original site, self-hosted via Fontsource.
+
 ## Photos
 Stock photos from Unsplash (free license, listed in `lib/photos.ts`). Replace them with real photos of the store, Dhruv and the team once the pharmacy opens.
 

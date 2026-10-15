@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import "@fontsource-variable/urbanist";
-import "@fontsource-variable/onest";
+import "@fontsource-variable/fraunces/opsz.css";
+import "@fontsource-variable/inter";
+import { ScrollFx } from "@/components/ScrollFx";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -60,6 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main">{children}</main>
         <Footer />
         <MobileBar />
+        <ScrollFx />
         <JsonLd data={pharmacySchema()} />
       </body>
     </html>

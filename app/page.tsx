@@ -11,14 +11,15 @@ export default function Home() {
         <div className="wrap hero__grid">
           <div className="hero__copy">
             <h1 className="display">
-              Millsboro&rsquo;s own
+              Committed to
               <br />
-              pharmacy
+              Health,
+              <br />
+              Built on Trust
             </h1>
             <p className="hero__lede">
-              We&rsquo;re an independent pharmacy on Centerview Dr, run by pharmacist Dhruv Patel.
-              Move your prescriptions over, get your flu shot here, and have refills brought to your
-              door for free.
+              Millsboro Pharmacy is your local neighborhood pharmacy, offering caring, personal service
+              and genuine relationships that put your health and well-being first from the very start.
             </p>
             <div className="hero__ctas">
               <Link href="/transfer" className="btn btn--red btn--lg">
@@ -74,6 +75,14 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="quote-band">
+        <div className="wrap">
+          <blockquote className="quote-band__q">
+            &ldquo;Personalized pharmacy care with heart at the center of every interaction.&rdquo;
+          </blockquote>
+        </div>
+      </section>
+
       <section className="section">
         <div className="wrap">
           <h2 className="h2">What you get when you switch</h2>
@@ -100,9 +109,15 @@ export default function Home() {
       <section className="section section--mist">
         <div className="wrap">
           <div className="section__head">
-            <h2 className="h2">How a transfer works</h2>
+            <div>
+              <h2 className="h2">Transferring is easier than you think.</h2>
+              <p className="section__sub">
+                Simply share your name and current pharmacy and we will take care of everything else,
+                usually completed the very same day.
+              </p>
+            </div>
             <Link href="/transfer" className="text-link">
-              Transfer details
+              Start your transfer
             </Link>
           </div>
           <div className="steps">
@@ -170,6 +185,28 @@ export default function Home() {
               </Link>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section className="section section--cream">
+        <div className="wrap indie">
+          <h2 className="indie__h">
+            Not a chain.
+            <br />
+            Not a franchise.
+            <br />
+            <span>Yours.</span>
+          </h2>
+          <div>
+            <p className="indie__p">
+              Millsboro Pharmacy is built by people who live here, for people who live here. No distant
+              corporate office decides how we serve you. Every decision is made with this community in
+              mind.
+            </p>
+            <Link href="/about" className="text-link">
+              Read our story
+            </Link>
+          </div>
         </div>
       </section>
 

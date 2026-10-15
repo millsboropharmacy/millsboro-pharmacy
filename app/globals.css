@@ -13,8 +13,10 @@
   --muted: #56627a;
   --line: #d9dfe8;
   --radius: 14px;
-  --display: "Urbanist Variable", "Urbanist", system-ui, sans-serif;
-  --body: "Onest Variable", "Onest", system-ui, sans-serif;
+  /* Same faces as the original site: Fraunces for headlines, Inter for everything else */
+  --display: "Fraunces Variable", "Fraunces", Georgia, "Times New Roman", serif;
+  --body: "Inter Variable", "Inter", system-ui, -apple-system, sans-serif;
+  --ui: var(--body);
   --wrap: 1180px;
 }
 
@@ -50,6 +52,7 @@ h1,
 h2,
 h3 {
   font-family: var(--display);
+  font-optical-sizing: auto;
   color: var(--ink);
   line-height: 1.08;
   margin: 0 0 0.5em;
@@ -86,16 +89,18 @@ address {
 
 /* type */
 .display {
-  font-size: clamp(3rem, 8.2vw, 6.4rem);
-  font-weight: 800;
-  line-height: 0.98;
-  letter-spacing: -0.03em;
+  font-size: clamp(3rem, 7.6vw, 6rem);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
   color: #fff;
   margin-bottom: 0.32em;
+  font-family: var(--display);
 }
 .h2 {
-  font-size: clamp(1.7rem, 3.2vw, 2.45rem);
-  font-weight: 800;
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  font-weight: 500;
+  font-family: var(--display);
 }
 .lede {
   font-size: 1.2rem;
@@ -109,7 +114,7 @@ address {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-family: var(--display);
+  font-family: var(--ui);
   font-weight: 700;
   font-size: 1.05rem;
   letter-spacing: 0.01em;
@@ -160,7 +165,7 @@ address {
   background: rgba(255, 255, 255, 0.1);
 }
 .text-link {
-  font-family: var(--display);
+  font-family: var(--ui);
   font-weight: 700;
   color: var(--red);
   text-decoration: none;
@@ -171,7 +176,7 @@ address {
   display: inline-flex;
   align-items: center;
   gap: 14px;
-  font-family: var(--display);
+  font-family: var(--ui);
   font-weight: 800;
   font-size: 1.15rem;
   color: var(--ink);
@@ -255,7 +260,7 @@ address {
   letter-spacing: -0.01em;
 }
 .wordmark b {
-  font-weight: 800;
+  font-weight: 600;
 }
 .wordmark--light {
   color: #fff;
@@ -266,7 +271,7 @@ address {
   align-items: center;
 }
 .nav__links a {
-  font-family: var(--display);
+  font-family: var(--ui);
   font-weight: 700;
   color: var(--text);
   text-decoration: none;
@@ -372,9 +377,10 @@ address {
 }
 .strip__h {
   font-size: clamp(1.35rem, 2.4vw, 1.8rem);
-  font-weight: 800;
+  font-weight: 500;
   margin: 0;
   max-width: 20em;
+  font-family: var(--display);
 }
 .strip__actions {
   display: flex;
@@ -395,9 +401,10 @@ address {
   border-bottom: 1px solid var(--line);
 }
 .actions__h {
-  font-size: clamp(1.5rem, 2.6vw, 2rem);
-  font-weight: 800;
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: 500;
   margin-bottom: 22px;
+  font-family: var(--display);
 }
 .actions__grid {
   display: grid;
@@ -422,7 +429,7 @@ address {
   transform: translateY(-2px);
 }
 .action__title {
-  font-family: var(--display);
+  font-family: var(--ui);
   font-weight: 800;
   font-size: 1.35rem;
   line-height: 1.2;
@@ -468,6 +475,50 @@ address {
 }
 .actions__call a {
   font-weight: 700;
+}
+
+/* old-site pull quote */
+.quote-band {
+  padding: 72px 0;
+  border-bottom: 1px solid var(--line);
+}
+.quote-band__q {
+  margin: 0;
+  max-width: 22em;
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.7rem, 3.6vw, 2.8rem);
+  line-height: 1.2;
+  color: var(--navy);
+  text-wrap: balance;
+}
+.section__sub {
+  color: var(--muted);
+  max-width: 36em;
+  margin: 10px 0 0;
+}
+.indie {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: end;
+}
+.indie__h {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.indie__h span {
+  color: var(--red);
+  font-style: italic;
+}
+.indie__p {
+  font-size: 1.15rem;
+  color: var(--text);
+  max-width: 30em;
 }
 
 /* sections */
@@ -529,7 +580,7 @@ address {
   margin-bottom: 32px;
 }
 .tile p {
-  font-family: var(--display);
+  font-family: var(--ui);
   font-weight: 700;
   font-size: 1.1rem;
   line-height: 1.35;
@@ -572,7 +623,7 @@ address {
 }
 .equation__result {
   color: var(--red);
-  font-weight: 800;
+  font-weight: 600;
 }
 
 /* services list */
@@ -621,7 +672,7 @@ address {
   transform: translateX(4px);
 }
 .svc__name {
-  font-family: var(--display);
+  font-family: var(--ui);
   font-weight: 800;
   font-size: 1.12rem;
   color: var(--ink);
@@ -645,7 +696,7 @@ address {
   border-radius: 40px;
   background: var(--navy);
   color: #fff;
-  font-family: var(--display);
+  font-family: var(--ui);
   font-weight: 800;
   font-size: 4.5rem;
   display: grid;
@@ -707,7 +758,7 @@ address {
   align-items: center;
   gap: 20px;
   padding: 20px 0;
-  font-family: var(--display);
+  font-family: var(--ui);
   font-weight: 700;
   font-size: 1.15rem;
   color: var(--ink);
@@ -816,6 +867,7 @@ address {
   max-width: 28em;
 }
 .footer__h {
+  font-family: var(--ui);
   font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -874,9 +926,10 @@ address {
 .phero h1 {
   color: #fff;
   font-size: clamp(2.3rem, 5.4vw, 4rem);
-  font-weight: 800;
+  font-weight: 400;
   letter-spacing: -0.025em;
   max-width: 16em;
+  font-family: var(--display);
 }
 .phero p {
   font-size: 1.15rem;
@@ -1243,6 +1296,13 @@ address {
   .actions__grid {
     grid-template-columns: 1fr;
   }
+  .indie {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .quote-band {
+    padding: 48px 0;
+  }
   .actions {
     padding: 36px 0 40px;
   }
@@ -1342,7 +1402,7 @@ address {
     background: var(--red);
     color: #fff;
     text-decoration: none;
-    font-family: var(--display);
+    font-family: var(--ui);
     font-weight: 800;
     text-align: center;
     border-radius: 999px;
@@ -1355,7 +1415,7 @@ address {
     gap: 6px;
     color: #fff;
     text-decoration: none;
-    font-family: var(--display);
+    font-family: var(--ui);
     font-weight: 700;
     padding: 0 18px;
   }
@@ -1368,6 +1428,20 @@ address {
     width: 100%;
   }
 }
+/* scroll reveal (added by ScrollFx only when motion is allowed) */
+.fx .fx-item {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.7s ease var(--fx-delay, 0ms), transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) var(--fx-delay, 0ms);
+}
+.fx .fx-item.fx-in {
+  opacity: 1;
+  transform: none;
+}
+.hero-art {
+  will-change: transform;
+}
+
 /* hero motion: the heartbeat draws in, pills drift */
 .hero-art .beat {
   stroke-dasharray: 1100;

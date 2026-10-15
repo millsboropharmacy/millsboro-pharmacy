@@ -86,11 +86,11 @@ export default function Home() {
               </p>
             </Link>
             <Link href="/about" className="tile">
-              <Pic name="consult" />
+              <Pic name="pillsBlue" />
               <p>A pharmacist who checks every new prescription against everything else you take</p>
             </Link>
             <Link href="/services/vaccines" className="tile">
-              <Pic name="vaccine" />
+              <Pic name="syringe" />
               <p>Flu, COVID-19, shingles and other vaccines, walk in or book a time</p>
             </Link>
           </div>

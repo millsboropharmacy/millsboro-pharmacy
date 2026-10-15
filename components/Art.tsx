@@ -11,13 +11,16 @@ export function HeroArt() {
       {/* overlap shade keeps the cross reading as one shape */}
       <rect x="250" y="200" width="190" height="170" fill="#9E1B24" />
       {/* capsule */}
+      <g className="float-a">
       <g transform="rotate(-32 140 120)">
         <rect x="40" y="82" width="200" height="76" rx="38" fill="#F7F3EA" />
         <path d="M140 82h62a38 38 0 0 1 0 76h-62z" fill="#BCD3F0" />
         <line x1="140" y1="82" x2="140" y2="158" stroke="#0F2447" strokeOpacity=".15" strokeWidth="3" />
       </g>
+      </g>
       {/* heartbeat */}
       <polyline
+        className="beat"
         points="0,286 210,286 262,206 330,372 398,206 448,286 560,286"
         fill="none"
         stroke="#F7F3EA"
@@ -26,8 +29,10 @@ export function HeroArt() {
         strokeLinejoin="round"
       />
       {/* tablet */}
-      <circle cx="120" cy="440" r="56" fill="#BCD3F0" />
-      <line x1="80" y1="480" x2="160" y2="400" stroke="#1B3A6B" strokeWidth="10" strokeLinecap="round" />
+      <g className="float-b">
+        <circle cx="120" cy="440" r="56" fill="#BCD3F0" />
+        <line x1="80" y1="480" x2="160" y2="400" stroke="#1B3A6B" strokeWidth="10" strokeLinecap="round" />
+      </g>
     </svg>
   );
 }

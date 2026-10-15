@@ -104,7 +104,7 @@ export type Service = {
 export const SERVICES: Service[] = [
   {
     slug: "prescription-refills",
-    photo: "takingPill",
+    photo: "bottle",
     name: "Prescriptions and refills",
     nav: "Prescriptions",
     title: "Prescription Refills in Millsboro, DE",
@@ -136,7 +136,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "vaccines",
-    photo: "syringe",
+    photo: "vials",
     name: "Vaccines and immunizations",
     nav: "Vaccines",
     title: "Flu Shots and Vaccines in Millsboro, DE",
@@ -190,7 +190,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "medication-synchronization",
-    photo: "organizerHand",
+    photo: "organizer",
     name: "Medication synchronization",
     nav: "Med sync",
     title: "Medication Synchronization in Millsboro, DE",
@@ -212,7 +212,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "adherence-packaging",
-    photo: "organizer",
+    photo: "blister",
     name: "Blister and adherence packaging",
     nav: "Packaging",
     title: "Blister Packs and Adherence Packaging in Millsboro, DE",
@@ -234,7 +234,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "compounding",
-    photo: "shelves",
+    photo: "capsules",
     name: "Non-sterile compounding",
     nav: "Compounding",
     title: "Compounding Pharmacy in Millsboro, DE",
@@ -340,7 +340,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "medication-reviews",
-    photo: "consult",
+    photo: "pillsOrange",
     name: "Medication reviews (MTM)",
     nav: "Med reviews",
     title: "Free Medication Review in Millsboro, DE",

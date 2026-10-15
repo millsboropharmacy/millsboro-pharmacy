@@ -28,8 +28,10 @@ export const BIZ = {
     name: "Dhruv Patel, PharmD",
     short: "Dhruv",
   },
-  // Opening banner. Set to "" once the doors are open.
-  openingNote: "Opening soon in Millsboro",
+  // From the pharmacy's own Instagram post. Set openingNote/openingDate to "" once open.
+  openingNote: "Opening November 2, 2026 in BJ's Plaza",
+  openingDate: "November 2, 2026",
+  plaza: "BJ's Plaza",
   // Add Facebook / Instagram / Google profile links here when they exist.
   socials: [] as { label: string; url: string }[],
 };
@@ -97,13 +99,13 @@ export type Service = {
   points?: string[];
   faqs: Faq[];
   cta?: "transfer" | "book" | "call";
-  photo?: import("./photos").PhotoKey;
+  icon: import("@/components/Icons").IconName;
 };
 
 export const SERVICES: Service[] = [
   {
     slug: "prescription-refills",
-    photo: "bottle",
+    icon: "bottle",
     name: "Prescriptions and refills",
     nav: "Prescriptions",
     title: "Prescription Refills in Millsboro, DE",
@@ -135,7 +137,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "vaccines",
-    photo: "vials",
+    icon: "syringe",
     name: "Vaccines and immunizations",
     nav: "Vaccines",
     title: "Flu Shots and Vaccines in Millsboro, DE",
@@ -162,7 +164,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "free-delivery",
-    photo: "delivery",
+    icon: "delivery",
     name: "Free local delivery",
     nav: "Delivery",
     title: "Free Prescription Delivery in Millsboro and Dagsboro, DE",
@@ -189,7 +191,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "medication-synchronization",
-    photo: "organizer",
+    icon: "calendar",
     name: "Medication synchronization",
     nav: "Med sync",
     title: "Medication Synchronization in Millsboro, DE",
@@ -211,7 +213,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "adherence-packaging",
-    photo: "blister",
+    icon: "blister",
     name: "Blister and adherence packaging",
     nav: "Packaging",
     title: "Blister Packs and Adherence Packaging in Millsboro, DE",
@@ -233,7 +235,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "compounding",
-    photo: "capsules",
+    icon: "flask",
     name: "Non-sterile compounding",
     nav: "Compounding",
     title: "Compounding Pharmacy in Millsboro, DE",
@@ -255,6 +257,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "insurance-and-savings",
+    icon: "savings",
     name: "Insurance help and savings",
     nav: "Insurance",
     title: "Prescription Insurance Help and Savings in Millsboro, DE",
@@ -276,6 +279,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "medical-equipment",
+    icon: "monitor",
     name: "Durable medical equipment",
     nav: "Equipment",
     title: "Medical Equipment and Supplies in Millsboro, DE",
@@ -297,6 +301,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "otc-and-minor-ailments",
+    icon: "chat",
     name: "Over-the-counter advice",
     nav: "OTC advice",
     title: "Over-the-Counter Advice from a Pharmacist in Millsboro, DE",
@@ -318,6 +323,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "health-screenings",
+    icon: "clipboard",
     name: "Point-of-care testing",
     nav: "Testing",
     title: "Health Screenings and Testing in Millsboro, DE",
@@ -339,7 +345,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "medication-reviews",
-    photo: "pillsOrange",
+    icon: "review",
     name: "Medication reviews (MTM)",
     nav: "Med reviews",
     title: "Free Medication Review in Millsboro, DE",

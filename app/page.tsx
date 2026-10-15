@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { HeroArt, StepIcon } from "@/components/Art";
-import { Pic } from "@/components/Pic";
+import { Icon } from "@/components/Icons";
 import { FaqList } from "@/components/Faq";
 import { BIZ, HOME_FAQS, HOURS, INSURANCE, SERVICES } from "@/lib/site";
 
@@ -31,6 +31,29 @@ export default function Home() {
             </div>
           </div>
           <HeroArt />
+        </div>
+      </section>
+
+      <section className="opening" aria-label="Opening date and location">
+        <div className="wrap">
+          <div className="opening__card">
+            <div className="opening__item">
+              <Icon name="calendar" size={64} />
+              <div>
+                <span className="opening__label">Opening</span>
+                <strong className="opening__big">{BIZ.openingDate}</strong>
+              </div>
+            </div>
+            <a href={BIZ.mapsUrl} className="opening__item" target="_blank" rel="noopener">
+              <Icon name="pin" size={64} />
+              <div>
+                <strong className="opening__place">Located in {BIZ.plaza}</strong>
+                <span className="opening__sub">
+                  {BIZ.street}, {BIZ.city}, {BIZ.state}
+                </span>
+              </div>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -86,21 +109,26 @@ export default function Home() {
       <section className="section">
         <div className="wrap">
           <h2 className="h2">What you get when you switch</h2>
-          <div className="tiles">
-            <Link href="/services/free-delivery" className="tile">
-              <Pic name="delivery" />
-              <p>
-                Free delivery around Millsboro and Dagsboro, same day on weekdays when it&rsquo;s
-                filled before 3pm
-              </p>
+          <div className="perks">
+            <Link href="/services" className="perk">
+              <Icon name="capsule" />
+              <h3>Personalized Care</h3>
+              <p>Every new prescription checked against everything else you take.</p>
             </Link>
-            <Link href="/about" className="tile">
-              <Pic name="pillsBlue" />
-              <p>A pharmacist who checks every new prescription against everything else you take</p>
+            <Link href="/about" className="perk">
+              <Icon name="mortar" />
+              <h3>Friendly Service</h3>
+              <p>A pharmacist who knows your name and answers your questions before you leave.</p>
             </Link>
-            <Link href="/services/vaccines" className="tile">
-              <Pic name="syringe" />
-              <p>Flu, COVID-19, shingles and other vaccines, walk in or book a time</p>
+            <Link href="/services/free-delivery" className="perk">
+              <Icon name="heart" />
+              <h3>Your Health, Our Priority</h3>
+              <p>Free local delivery, med sync, vaccines and free medication reviews.</p>
+            </Link>
+            <Link href="/about" className="perk">
+              <Icon name="store" />
+              <h3>Local &amp; Independent</h3>
+              <p>Owned and run right here in Millsboro. No corporate office.</p>
             </Link>
           </div>
         </div>

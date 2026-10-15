@@ -5,9 +5,6 @@ const nextConfig = {
   // Static export is only used for preview builds (Netlify). Vercel uses the normal build.
   ...(isExport ? { output: "export", trailingSlash: true } : {}),
   poweredByHeader: false,
-  images: isExport
-    ? { unoptimized: true }
-    : { remotePatterns: [{ protocol: "https", hostname: "images.unsplash.com" }], formats: ["image/avif", "image/webp"] },
   async redirects() {
     if (isExport) return [];
     return [

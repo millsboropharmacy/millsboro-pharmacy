@@ -30,8 +30,8 @@ In the existing Vercel project: Settings > Git, connect this repo. The domain st
 ## Fonts
 Fraunces (headlines) and Inter (everything else), the same faces as the original site, self-hosted via Fontsource.
 
-## Photos
-Stock photos from Unsplash (free license, listed in `lib/photos.ts`). Replace them with real photos of the store, Dhruv and the team once the pharmacy opens.
+## Icons
+No photos (Dhruv's call). Line-icon decals live in `components/Icons.tsx`; each service picks one in `lib/site.ts`.
 
 ## Patient actions
 The home page has three cards: Transfer, Refill (`/refill`) and Book a vaccine (Calendly). Transfer and Refill show call-in options until `TRANSFER_FORM_URL` / `REFILL_FORM_URL` in `lib/site.ts` are set to a HIPAA form with a BAA (or Rx30's refill app link).

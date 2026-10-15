@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Icon } from "@/components/Icons";
 import { PageHero } from "@/components/PageHero";
 import { SERVICES } from "@/lib/site";
 
@@ -23,6 +24,7 @@ export default function ServicesPage() {
           <ul className="svc-index">
             <li>
               <Link href="/transfer">
+                <Icon name="transfer" size={64} />
                 <h2>Prescription transfers</h2>
                 <p>From any pharmacy, usually the same day. We call your old pharmacy for you.</p>
               </Link>
@@ -30,6 +32,7 @@ export default function ServicesPage() {
             {SERVICES.map((s) => (
               <li key={s.slug}>
                 <Link href={`/services/${s.slug}`}>
+                  <Icon name={s.icon} size={64} />
                   <h2>{s.name}</h2>
                   <p>{s.blurb}</p>
                 </Link>

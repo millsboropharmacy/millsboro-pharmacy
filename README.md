@@ -26,3 +26,9 @@ The old site's `app/api/send` route (Resend to Gmail with license and insurance 
 
 ## Going live on Dhruv's Vercel
 In the existing Vercel project: Settings > Git, connect this repo. The domain stays the same. `/contact` redirects to `/contact-us`.
+
+## Photos
+Stock photos from Unsplash (free license, listed in `lib/photos.ts`). Replace them with real photos of the store, Dhruv and the team once the pharmacy opens.
+
+## Patient actions
+The home page has three cards: Transfer, Refill (`/refill`) and Book a vaccine (Calendly). Transfer and Refill show call-in options until `TRANSFER_FORM_URL` / `REFILL_FORM_URL` in `lib/site.ts` are set to a HIPAA form with a BAA (or Rx30's refill app link).

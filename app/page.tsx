@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { HeroArt, StepIcon, TileArt } from "@/components/Art";
+import { HeroArt, StepIcon } from "@/components/Art";
+import { Pic } from "@/components/Pic";
 import { FaqList } from "@/components/Faq";
 import { BIZ, HOME_FAQS, HOURS, INSURANCE, SERVICES } from "@/lib/site";
 
@@ -32,20 +33,44 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="strip">
-        <div className="wrap strip__row">
-          <h2 className="strip__h">Moving your prescriptions here takes about two minutes.</h2>
-          <div className="strip__actions">
-            <Link href="/transfer" className="arrow-link">
-              Start a transfer
-              <span aria-hidden="true" className="arrow-link__box">
+      <section className="actions" aria-labelledby="actions-h">
+        <div className="wrap">
+          <h2 id="actions-h" className="actions__h">
+            What do you need today?
+          </h2>
+          <div className="actions__grid">
+            <Link href="/transfer" className="action action--main">
+              <span className="action__title">Transfer my prescriptions</span>
+              <span className="action__text">
+                Switching from CVS, Walgreens or anywhere else. Takes about two minutes and we do the
+                calling.
+              </span>
+              <span className="action__go" aria-hidden="true">
                 →
               </span>
             </Link>
-            <span className="strip__or">
-              or call <a href={BIZ.phoneHref}>{BIZ.phone}</a>
-            </span>
+            <Link href="/refill" className="action">
+              <span className="action__title">Refill a prescription</span>
+              <span className="action__text">
+                Have your prescription number handy and we&rsquo;ll get it ready for pickup or delivery.
+              </span>
+              <span className="action__go" aria-hidden="true">
+                →
+              </span>
+            </Link>
+            <a href={BIZ.calendly} className="action" target="_blank" rel="noopener">
+              <span className="action__title">Book a vaccine</span>
+              <span className="action__text">
+                Flu, COVID-19, shingles and more. Pick a time online, or just walk in.
+              </span>
+              <span className="action__go" aria-hidden="true">
+                →
+              </span>
+            </a>
           </div>
+          <p className="actions__call">
+            Rather talk to someone? Call <a href={BIZ.phoneHref}>{BIZ.phone}</a>
+          </p>
         </div>
       </section>
 
@@ -54,18 +79,18 @@ export default function Home() {
           <h2 className="h2">What you get when you switch</h2>
           <div className="tiles">
             <Link href="/services/free-delivery" className="tile">
-              <TileArt kind="delivery" />
+              <Pic name="delivery" />
               <p>
                 Free delivery around Millsboro and Dagsboro, same day on weekdays when it&rsquo;s
                 filled before 3pm
               </p>
             </Link>
             <Link href="/about" className="tile">
-              <TileArt kind="pharmacist" />
+              <Pic name="consult" />
               <p>A pharmacist who checks every new prescription against everything else you take</p>
             </Link>
             <Link href="/services/vaccines" className="tile">
-              <TileArt kind="vaccine" />
+              <Pic name="vaccine" />
               <p>Flu, COVID-19, shingles and other vaccines, walk in or book a time</p>
             </Link>
           </div>

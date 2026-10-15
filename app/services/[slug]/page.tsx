@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { FaqList } from "@/components/Faq";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
+import { Pic } from "@/components/Pic";
 import { VisitAside } from "@/components/VisitAside";
 import { serviceSchema } from "@/lib/schema";
 import { SERVICES, serviceBySlug } from "@/lib/site";
@@ -47,6 +48,7 @@ export default async function ServicePage({ params }: Props) {
       <section className="section">
         <div className="wrap content">
           <div className="prose">
+            {s.photo && <Pic name={s.photo} className="pic--wide" sizes="(max-width: 900px) 100vw, 60vw" priority />}
             {s.body.map((p) => (
               <p key={p.slice(0, 24)}>{p}</p>
             ))}

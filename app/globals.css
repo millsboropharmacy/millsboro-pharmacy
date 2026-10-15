@@ -32,7 +32,7 @@ body {
   background: var(--paper);
   color: var(--text);
   font-family: var(--body);
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -111,9 +111,10 @@ address {
   gap: 8px;
   font-family: var(--display);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.05rem;
   letter-spacing: 0.01em;
-  padding: 14px 22px;
+  padding: 15px 24px;
+  min-height: 48px;
   border-radius: 10px;
   border: 2px solid transparent;
   text-decoration: none;
@@ -388,6 +389,87 @@ address {
   font-weight: 700;
 }
 
+/* "what do you need today" actions */
+.actions {
+  padding: 48px 0 56px;
+  border-bottom: 1px solid var(--line);
+}
+.actions__h {
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+.actions__grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr;
+  gap: 16px;
+}
+.action {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 26px 64px 26px 26px;
+  border-radius: 16px;
+  background: var(--mist);
+  color: var(--text);
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.action:hover {
+  border-color: var(--navy);
+  transform: translateY(-2px);
+}
+.action__title {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  color: var(--ink);
+}
+.action__text {
+  color: var(--muted);
+  font-size: 1rem;
+}
+.action__go {
+  position: absolute;
+  right: 20px;
+  top: 24px;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: var(--navy);
+  color: #fff;
+  font-weight: 700;
+}
+.action--main {
+  background: var(--red);
+}
+.action--main .action__title {
+  color: #fff;
+  font-size: 1.5rem;
+}
+.action--main .action__text {
+  color: #ffe3e5;
+}
+.action--main .action__go {
+  background: #fff;
+  color: var(--red);
+}
+.action--main:hover {
+  border-color: var(--ink);
+}
+.actions__call {
+  margin: 18px 0 0;
+  color: var(--muted);
+}
+.actions__call a {
+  font-weight: 700;
+}
+
 /* sections */
 .section {
   padding: 88px 0;
@@ -427,16 +509,24 @@ address {
   text-decoration: none;
   color: var(--ink);
 }
-.tile svg {
+.pic {
+  position: relative;
   width: 100%;
-  object-fit: cover;
-  height: auto;
   aspect-ratio: 1;
+  overflow: hidden;
   border-radius: 6px;
-  transition: transform 0.25s ease;
+  background: var(--mist);
 }
-.tile:hover svg {
-  transform: scale(1.015);
+.pic img {
+  transition: transform 0.4s ease;
+}
+.tile:hover .pic img {
+  transform: scale(1.03);
+}
+.pic--wide {
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius);
+  margin-bottom: 32px;
 }
 .tile p {
   font-family: var(--display);
@@ -1086,7 +1176,7 @@ address {
 }
 @media (max-width: 900px) {
   body {
-    font-size: 16.5px;
+    font-size: 17.5px;
     padding-bottom: 86px;
   }
   .utility__links span:not(.utility__sep) {
@@ -1150,6 +1240,12 @@ address {
     grid-template-columns: 1fr;
     gap: 8px;
   }
+  .actions__grid {
+    grid-template-columns: 1fr;
+  }
+  .actions {
+    padding: 36px 0 40px;
+  }
   .nav__actions .btn {
     display: none;
   }
@@ -1171,9 +1267,8 @@ address {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-  .tile svg {
+  .tile .pic {
     aspect-ratio: 4 / 3;
-    object-fit: cover;
   }
   .steps,
   .flow {

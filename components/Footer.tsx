@@ -67,6 +67,7 @@ export function Footer() {
       <div className="wrap footer__base">
         <span>© {new Date().getFullYear()} Millsboro Pharmacy</span>
         <span className="footer__base-links">
+          <Link href="/refill">Refill</Link>
           <Link href="/about">About</Link>
           <Link href="/areas-we-serve">Areas we serve</Link>
           <Link href="/contact-us">Contact</Link>

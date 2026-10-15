@@ -39,6 +39,28 @@ export const BIZ = {
 // page shows call / fax / walk-in options and no data is collected on the site.
 export const TRANSFER_FORM_URL = "";
 
+// Same idea for refills: the secure form's embed URL, or Rx30's refill app link.
+export const REFILL_FORM_URL = "";
+
+export const REFILL_FAQS: Faq[] = [
+  {
+    q: "Where do I find my prescription number?",
+    a: "It's printed on your prescription label, usually near the top and marked Rx. If you can't find it, tell us your name and date of birth and the medication, and we'll look it up.",
+  },
+  {
+    q: "How soon will my refill be ready?",
+    a: "Most in-stock refills are ready in under 15 minutes. We'll tell you when you call.",
+  },
+  {
+    q: "What if I'm out of refills?",
+    a: "We'll contact your doctor's office for a new prescription and let you know when it comes in.",
+  },
+  {
+    q: "Can you deliver my refill?",
+    a: "Yes, free around Millsboro and Dagsboro. Refills filled before 3pm on a weekday can come the same day.",
+  },
+];
+
 // Hours. Saturday is listed as "9am - 3am" on the old site, which reads as a
 // typo for 3pm. CONFIRM WITH DHRUV before launch.
 export const HOURS = [
@@ -76,11 +98,13 @@ export type Service = {
   points?: string[];
   faqs: Faq[];
   cta?: "transfer" | "book" | "call";
+  photo?: import("./photos").PhotoKey;
 };
 
 export const SERVICES: Service[] = [
   {
     slug: "prescription-refills",
+    photo: "takingPill",
     name: "Prescriptions and refills",
     nav: "Prescriptions",
     title: "Prescription Refills in Millsboro, DE",
@@ -112,6 +136,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "vaccines",
+    photo: "syringe",
     name: "Vaccines and immunizations",
     nav: "Vaccines",
     title: "Flu Shots and Vaccines in Millsboro, DE",
@@ -138,6 +163,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "free-delivery",
+    photo: "delivery",
     name: "Free local delivery",
     nav: "Delivery",
     title: "Free Prescription Delivery in Millsboro and Dagsboro, DE",
@@ -164,6 +190,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "medication-synchronization",
+    photo: "organizerHand",
     name: "Medication synchronization",
     nav: "Med sync",
     title: "Medication Synchronization in Millsboro, DE",
@@ -185,6 +212,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "adherence-packaging",
+    photo: "organizer",
     name: "Blister and adherence packaging",
     nav: "Packaging",
     title: "Blister Packs and Adherence Packaging in Millsboro, DE",
@@ -206,6 +234,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "compounding",
+    photo: "shelves",
     name: "Non-sterile compounding",
     nav: "Compounding",
     title: "Compounding Pharmacy in Millsboro, DE",
@@ -311,6 +340,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "medication-reviews",
+    photo: "consult",
     name: "Medication reviews (MTM)",
     nav: "Med reviews",
     title: "Free Medication Review in Millsboro, DE",

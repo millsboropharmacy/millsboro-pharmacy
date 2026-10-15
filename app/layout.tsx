@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | Millsboro Pharmacy",
   },
   description:
-    "Independent pharmacy on Centerview Dr in Millsboro, Delaware. Prescription transfers, refills, flu shots and vaccines, free local delivery and compounding. Call (302) 297-5345.",
+    "Independent pharmacy in BJ's Plaza, Millsboro, DE. Prescription transfers, refills, flu shots, free local delivery and compounding. Call (302) 297-5345.",
   applicationName: "Millsboro Pharmacy",
   keywords: [
     "pharmacy Millsboro DE",

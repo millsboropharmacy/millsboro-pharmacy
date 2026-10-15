@@ -19,6 +19,9 @@ The site does not collect patient data. Set `TRANSFER_FORM_URL` in `lib/site.ts`
 The old site's `app/api/send` route (Resend to Gmail with license and insurance photos) is intentionally gone. Remove the `RESEND_API` env var from Vercel when this goes live.
 
 ## Before launch
+- **Required (HIPAA):** post the pharmacy's Notice of Privacy Practices. Drop the PDF in `public/` and set `NPP_URL` in `lib/site.ts`; it then links from the footer and the Privacy Policy.
+- Remove the opening banner after Nov 2, 2026 (`openingNote` / `openingDate` in `lib/site.ts`, and the opening card on the home page).
+- Confirm the insurance list with Dhruv.
 - Confirm Saturday hours (old site said "9am - 3am"; this uses 9am to 3pm).
 - Add a photo of Dhruv for the About page (currently initials).
 - Add Google Business Profile / Facebook links to `BIZ.socials` in `lib/site.ts`.

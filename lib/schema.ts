@@ -43,11 +43,14 @@ export function pharmacySchema() {
     },
     paymentAccepted: "Cash, Credit Card, Insurance",
     currenciesAccepted: "USD",
-    availableService: SERVICES.map((s) => ({
-      "@type": "MedicalProcedure",
-      name: s.name,
-      url: `${SITE_URL}/services/${s.slug}`,
-    })),
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Pharmacy services",
+      itemListElement: SERVICES.map((s) => ({
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: s.name, url: `${SITE_URL}/services/${s.slug}` },
+      })),
+    },
     sameAs: BIZ.socials.map((s) => s.url),
   };
 }

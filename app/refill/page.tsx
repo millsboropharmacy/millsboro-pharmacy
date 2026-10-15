@@ -5,7 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { BIZ, HOURS, REFILL_FAQS, REFILL_FORM_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Refill a Prescription at Millsboro Pharmacy",
+  title: { absolute: "Refill a Prescription at Millsboro Pharmacy" },
   description:
     "Refill your prescription at Millsboro Pharmacy in Millsboro, DE. Call (302) 297-5345 with your prescription number. Pickup or free local delivery.",
   alternates: { canonical: "/refill" },

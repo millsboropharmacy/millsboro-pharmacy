@@ -1336,6 +1336,25 @@ address {
   grid-row: span 2;
 }
 
+/* legal pages */
+.legal {
+  max-width: 760px;
+}
+.legal h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 40px 0 12px;
+}
+.legal h2:first-child {
+  margin-top: 0;
+}
+.legal ul {
+  padding-left: 20px;
+}
+.legal li {
+  margin-bottom: 10px;
+}
+
 /* responsive */
 @media (max-width: 1020px) {
   .nav__links {

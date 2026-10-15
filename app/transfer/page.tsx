@@ -5,7 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { BIZ, TRANSFER_FAQS, TRANSFER_FORM_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Transfer Your Prescription to Millsboro Pharmacy",
+  title: { absolute: "Transfer Your Prescription to Millsboro Pharmacy" },
   description:
     "Switch your prescriptions from CVS, Walgreens, Walmart or any pharmacy to Millsboro Pharmacy in Millsboro, DE. We call your old pharmacy for you, usually same day.",
   alternates: { canonical: "/transfer" },

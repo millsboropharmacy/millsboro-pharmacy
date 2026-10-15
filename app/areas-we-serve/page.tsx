@@ -4,7 +4,7 @@ import { PageHero } from "@/components/PageHero";
 import { BIZ } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Pharmacy Near Millsboro, Dagsboro and Sussex County, DE",
+  title: "Pharmacy Near Millsboro and Dagsboro, DE",
   description:
     "Millsboro Pharmacy serves Millsboro, Dagsboro and nearby Sussex County towns with free prescription delivery, transfers, vaccines and refills.",
   alternates: { canonical: "/areas-we-serve" },

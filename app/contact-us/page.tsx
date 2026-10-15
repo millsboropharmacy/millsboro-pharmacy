@@ -3,7 +3,7 @@ import { PageHero } from "@/components/PageHero";
 import { BIZ, HOURS, INSURANCE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact Millsboro Pharmacy | Hours, Phone and Directions",
+  title: { absolute: "Contact Millsboro Pharmacy | Hours and Directions" },
   description:
     "Millsboro Pharmacy, 26670 Centerview Dr, Unit 9, Millsboro, DE 19966. Call (302) 297-5345, fax (302) 297-5344. Open Monday to Friday 9 to 7, Saturday 9 to 3.",
   alternates: { canonical: "/contact-us" },
@@ -14,7 +14,7 @@ export default function ContactPage() {
     <>
       <PageHero
         title="Visit or call Millsboro Pharmacy"
-        lede="We're at 26670 Centerview Dr, Unit 9, in Millsboro. Call, fax, email or just stop in."
+        lede="We're in BJ's Plaza at 26670 Centerview Dr, Unit 9, in Millsboro. Call, fax, email or just stop in."
         crumbs={[{ name: "Contact", path: "/contact-us" }]}
       />
 

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BIZ, HOURS, SERVICES } from "@/lib/site";
+import { BIZ, HOURS, NPP_URL, SERVICES } from "@/lib/site";
 import { Wordmark } from "./Logo";
 
 export function Footer() {
@@ -71,6 +71,8 @@ export function Footer() {
           <Link href="/about">About</Link>
           <Link href="/areas-we-serve">Areas we serve</Link>
           <Link href="/contact-us">Contact</Link>
+          <Link href="/privacy">Privacy Policy</Link>
+          {NPP_URL && <a href={NPP_URL}>Notice of Privacy Practices</a>}
         </span>
       </div>
     </footer>

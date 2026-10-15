@@ -3,7 +3,7 @@ import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "About Millsboro Pharmacy | Independent and Locally Owned",
+  title: { absolute: "About Millsboro Pharmacy | Locally Owned in Millsboro, DE" },
   description:
     "Millsboro Pharmacy is independently owned and run by pharmacist Dhruv Patel, PharmD. No corporate office, no quotas, just a local pharmacy for Millsboro, DE.",
   alternates: { canonical: "/about" },

@@ -7,7 +7,7 @@ import { SERVICES } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Pharmacy Services in Millsboro, DE",
   description:
-    "Prescription refills and transfers, flu shots and vaccines, free delivery, med sync, blister packs, compounding, medical equipment and free medication reviews at Millsboro Pharmacy.",
+    "Refills, transfers, flu shots, free delivery, med sync, blister packs, compounding and free medication reviews at Millsboro Pharmacy in Millsboro, DE.",
   alternates: { canonical: "/services" },
 };
 

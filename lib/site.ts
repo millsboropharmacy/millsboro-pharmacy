@@ -41,6 +41,10 @@ export const BIZ = {
 // page shows call / fax / walk-in options and no data is collected on the site.
 export const TRANSFER_FORM_URL = "";
 
+// HIPAA requires the pharmacy's Notice of Privacy Practices to be posted on its website.
+// Put the PDF in /public (e.g. /notice-of-privacy-practices.pdf) and set the path here.
+export const NPP_URL = "";
+
 // Same idea for refills: the secure form's embed URL, or Rx30's refill app link.
 export const REFILL_FORM_URL = "";
 
@@ -167,7 +171,7 @@ export const SERVICES: Service[] = [
     icon: "delivery",
     name: "Free local delivery",
     nav: "Delivery",
-    title: "Free Prescription Delivery in Millsboro and Dagsboro, DE",
+    title: "Free Prescription Delivery in Millsboro, DE",
     description:
       "Millsboro Pharmacy delivers prescriptions free in Millsboro, Dagsboro and nearby towns. Same-day delivery for prescriptions filled before 3pm on weekdays.",
     h1: "Free prescription delivery around Millsboro",
@@ -216,7 +220,7 @@ export const SERVICES: Service[] = [
     icon: "blister",
     name: "Blister and adherence packaging",
     nav: "Packaging",
-    title: "Blister Packs and Adherence Packaging in Millsboro, DE",
+    title: "Blister Pack Pharmacy in Millsboro, DE",
     description:
       "Medications packed by day and time in labeled blister cards. Helpful for seniors, recovery after surgery, or anyone taking 4 or more daily medications.",
     h1: "Medications packed by day and time",
@@ -260,7 +264,7 @@ export const SERVICES: Service[] = [
     icon: "savings",
     name: "Insurance help and savings",
     nav: "Insurance",
-    title: "Prescription Insurance Help and Savings in Millsboro, DE",
+    title: "Prescription Savings Help in Millsboro, DE",
     description:
       "We check your coverage, compare cash prices, handle prior authorizations and find manufacturer coupons and discount programs to lower what you pay.",
     h1: "Paying less for your prescriptions",
@@ -282,7 +286,7 @@ export const SERVICES: Service[] = [
     icon: "monitor",
     name: "Durable medical equipment",
     nav: "Equipment",
-    title: "Medical Equipment and Supplies in Millsboro, DE",
+    title: "Medical Equipment in Millsboro, DE",
     description:
       "Blood pressure monitors, nebulizers, compression stockings, braces, bathroom safety equipment and mobility aids at Millsboro Pharmacy.",
     h1: "Medical equipment and home health supplies",
@@ -304,7 +308,7 @@ export const SERVICES: Service[] = [
     icon: "chat",
     name: "Over-the-counter advice",
     nav: "OTC advice",
-    title: "Over-the-Counter Advice from a Pharmacist in Millsboro, DE",
+    title: "Pharmacist OTC Advice in Millsboro, DE",
     description:
       "Not sure what to take for a cold, allergy or minor injury? Ask the pharmacist at Millsboro Pharmacy. Vitamins, first aid and OTC medicines in store.",
     h1: "Ask the pharmacist before you pick a box",
@@ -326,7 +330,7 @@ export const SERVICES: Service[] = [
     icon: "clipboard",
     name: "Point-of-care testing",
     nav: "Testing",
-    title: "Health Screenings and Testing in Millsboro, DE",
+    title: "Health Screenings in Millsboro, DE",
     description:
       "In-store health screenings at Millsboro Pharmacy with results in minutes and a pharmacist to explain what's next.",
     h1: "Health screenings with results in minutes",

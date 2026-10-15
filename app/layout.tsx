@@ -7,13 +7,12 @@ import { Footer } from "@/components/Footer";
 import { MobileBar } from "@/components/MobileBar";
 import { JsonLd } from "@/components/JsonLd";
 import { pharmacySchema } from "@/lib/schema";
-import { SITE_URL } from "@/lib/site";
+import { BASE_URL, NOINDEX } from "@/lib/site";
 
-// Preview builds (Netlify) set NOINDEX=1 so the preview never competes with the real domain.
-const noindex = process.env.NOINDEX === "1";
+const noindex = NOINDEX;
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
+  metadataBase: new URL(BASE_URL),
   title: {
     default: "Millsboro Pharmacy | Independent Pharmacy in Millsboro, DE",
     template: "%s | Millsboro Pharmacy",
@@ -35,7 +34,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Millsboro Pharmacy",
     locale: "en_US",
-    url: SITE_URL,
+    url: BASE_URL,
   },
   twitter: { card: "summary_large_image" },
   robots: noindex

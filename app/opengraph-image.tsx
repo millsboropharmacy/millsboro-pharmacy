@@ -1,7 +1,8 @@
 import { ImageResponse } from "next/og";
 
+// Link preview card (iMessage, Facebook, Google, etc.): the logo front and center.
 export const dynamic = "force-static";
-export const alt = "Millsboro Pharmacy, independent pharmacy in Millsboro, Delaware";
+export const alt = "Millsboro Pharmacy logo";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -13,20 +14,44 @@ export default function OgImage() {
           width: "100%",
           height: "100%",
           display: "flex",
+          alignItems: "center",
           background: "#0F2447",
-          position: "relative",
+          padding: "0 90px",
           fontFamily: "sans-serif",
         }}
       >
-        <div style={{ position: "absolute", left: 760, top: 40, width: 200, height: 620, borderRadius: 46, background: "#2B5598" }} />
-        <div style={{ position: "absolute", left: 620, top: 230, width: 620, height: 180, borderRadius: 42, background: "#C0212B" }} />
-        <div style={{ position: "absolute", left: 760, top: 230, width: 200, height: 180, background: "#9E1B24" }} />
-        <div style={{ display: "flex", flexDirection: "column", padding: "90px 80px", color: "#fff", width: 640 }}>
-          <div style={{ fontSize: 96, fontWeight: 800, lineHeight: 1 }}>Millsboro Pharmacy</div>
-          <div style={{ fontSize: 34, marginTop: 30, color: "#DBE5F5", lineHeight: 1.3 }}>
-            Independent pharmacy on Centerview Dr, Millsboro, DE
+        <div
+          style={{
+            width: 340,
+            height: 340,
+            borderRadius: 64,
+            background: "#FFFFFF",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexShrink: 0,
+          }}
+        >
+          <svg width="270" height="265" viewBox="55 15 300 295">
+            <rect x="62" y="100" width="288" height="122" rx="24" fill="#C0212B" />
+            <rect x="140" y="20" width="130" height="285" rx="30" fill="#1B3A6B" />
+            <polyline
+              points="100,161 138,161 166,109 205,220 244,109 272,161 312,161"
+              fill="none"
+              stroke="#FFFFFF"
+              strokeWidth="19"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
+        <div style={{ display: "flex", flexDirection: "column", marginLeft: 70, color: "#FFFFFF" }}>
+          <div style={{ fontSize: 92, fontWeight: 800, lineHeight: 1 }}>Millsboro</div>
+          <div style={{ fontSize: 92, fontWeight: 800, lineHeight: 1.05 }}>Pharmacy</div>
+          <div style={{ fontSize: 34, marginTop: 30, color: "#DBE5F5" }}>Independent pharmacy in Millsboro, DE</div>
+          <div style={{ display: "flex", marginTop: 26, fontSize: 32, color: "#FFFFFF" }}>
+            <div style={{ background: "#C0212B", borderRadius: 12, padding: "10px 22px" }}>(302) 297-5345</div>
           </div>
-          <div style={{ fontSize: 30, marginTop: 40, color: "#fff" }}>(302) 297-5345</div>
         </div>
       </div>
     ),

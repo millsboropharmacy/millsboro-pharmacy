@@ -22,7 +22,7 @@ The old site's `app/api/send` route (Resend to Gmail with license and insurance 
 - Confirm Saturday hours (old site said "9am - 3am"; this uses 9am to 3pm).
 - Add a photo of Dhruv for the About page (currently initials).
 - Add Google Business Profile / Facebook links to `BIZ.socials` in `lib/site.ts`.
-- Remove `NOINDEX=1` from the preview environment. Production must not set it.
+- Google indexing and link-preview URLs switch to millsboropharmacy.com automatically once that domain is the Vercel project's production domain. Preview copies stay noindex.
 
 ## Going live on Dhruv's Vercel
 In the existing Vercel project: Settings > Git, connect this repo. The domain stays the same. `/contact` redirects to `/contact-us`.

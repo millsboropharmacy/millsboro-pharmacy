@@ -406,3 +406,12 @@ export const TRANSFER_FAQS: Faq[] = [
     a: "We'll reach out to your doctor for a new prescription.",
   },
 ];
+
+// Real domain vs preview copies. Vercel sets VERCEL_PROJECT_PRODUCTION_URL to the
+// project's main domain (the custom domain once one is attached).
+const prodHost = process.env.VERCEL_PROJECT_PRODUCTION_URL ?? "";
+export const IS_REAL_DOMAIN = !process.env.VERCEL || prodHost.includes("millsboropharmacy.com");
+// Link previews (og:image) must point at the site actually being shared.
+export const BASE_URL = IS_REAL_DOMAIN ? SITE_URL : `https://${prodHost}`;
+// Preview copies stay out of Google so they never compete with the real site.
+export const NOINDEX = process.env.NOINDEX === "1" || !IS_REAL_DOMAIN;

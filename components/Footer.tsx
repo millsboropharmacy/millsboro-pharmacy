@@ -15,6 +15,23 @@ export function Footer() {
           <Link href="/transfer" className="btn btn--red">
             Transfer your prescriptions
           </Link>
+          <div className="socials">
+            {BIZ.socials.map((s) => (
+              <a key={s.label} href={s.url} target="_blank" rel="noopener" aria-label={`Millsboro Pharmacy on ${s.label}`}>
+                {s.label === "Facebook" ? (
+                  <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                    <path fill="#fff" d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z" />
+                  </svg>
+                ) : (
+                  <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="#fff" strokeWidth="2">
+                    <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="17.3" cy="6.7" r="1" fill="#fff" stroke="none" />
+                  </svg>
+                )}
+              </a>
+            ))}
+          </div>
         </div>
 
         <div>

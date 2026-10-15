@@ -32,8 +32,10 @@ export const BIZ = {
   openingNote: "Opening November 2, 2026 in BJ's Plaza",
   openingDate: "November 2, 2026",
   plaza: "BJ's Plaza",
-  // Add Facebook / Instagram / Google profile links here when they exist.
-  socials: [] as { label: string; url: string }[],
+  socials: [
+    { label: "Facebook", url: "https://www.facebook.com/share/1Es1U3mqRW/" },
+    { label: "Instagram", url: "https://www.instagram.com/millsboropharmacy/" },
+  ] as { label: string; url: string }[],
 };
 
 // HIPAA-covered transfer form (HIPAAtizer or the Rx30 option).

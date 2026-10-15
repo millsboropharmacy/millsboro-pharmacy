@@ -80,7 +80,6 @@ export const INSURANCE = [
   "Express Scripts",
   "CVS Caremark",
   "OptumRx",
-  "Tricare",
   "Workers' Comp",
 ];
 
@@ -270,7 +269,7 @@ export const SERVICES: Service[] = [
     faqs: [
       {
         q: "Which insurance plans do you take?",
-        a: "Most major plans, including Medicare Part D, Delaware Medicaid, Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Humana, Express Scripts, CVS Caremark, OptumRx, Tricare and Workers' Comp. Call us to check yours.",
+        a: "Most major plans, including Medicare Part D, Delaware Medicaid, Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Humana, Express Scripts, CVS Caremark, OptumRx and Workers' Comp. Call us to check yours.",
       },
     ],
     cta: "call",
@@ -372,7 +371,7 @@ export const HOME_FAQS: Faq[] = [
   },
   {
     q: "Do you take my insurance?",
-    a: "We take most major plans, including Medicare Part D, Delaware Medicaid, Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Humana, Express Scripts, CVS Caremark, OptumRx and Tricare. Call to check yours.",
+    a: "We take most major plans, including Medicare Part D, Delaware Medicaid, Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Humana, Express Scripts, CVS Caremark and OptumRx. Call to check yours.",
   },
   {
     q: "Do you deliver?",

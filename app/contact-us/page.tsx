@@ -89,7 +89,7 @@ export default function ContactPage() {
         <div className="wrap ins">
           <div>
             <h2 className="h2">Insurance we take</h2>
-            <p>This is a partial list. Call to check your plan.</p>
+            <p>This is a partial list, and some plans are still being finalized for opening day. Call to check your plan.</p>
           </div>
           <ul className="ins__list">
             {INSURANCE.map((i) => (

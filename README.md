@@ -21,8 +21,8 @@ The old site's `app/api/send` route (Resend to Gmail with license and insurance 
 ## Before launch
 - **HIPAA Notice of Privacy Practices:** drafted from the HHS model notice (Feb 2026, includes Part 2), live at `/notice-of-privacy-practices` with a print PDF at `public/notice-of-privacy-practices.pdf`. Privacy Officer: Dhruv. Effective Oct 2, 2026 (Dhruv's date). Have the PSAO/compliance contact review it. If the page text changes, regenerate the PDF (print the page to PDF).
 - Remove the opening banner after Nov 2, 2026 (`openingNote` / `openingDate` in `lib/site.ts`, and the opening card on the home page).
-- Confirm the insurance list with Dhruv.
-- Confirm Saturday hours (old site said "9am - 3am"; this uses 9am to 3pm).
+- Insurance list confirmed by Dhruv (Oct 19). Some plans pending after opening; site says to call to confirm. Remove that line once all are active.
+- Saturday hours confirmed 9am to 3pm (Oct 19).
 - Add a photo of Dhruv for the About page (currently initials).
 - Add the Google Business Profile link to `BIZ.socials` in `lib/site.ts` once it exists (Facebook and Instagram are in).
 - Google indexing and link-preview URLs switch to millsboropharmacy.com automatically once that domain is the Vercel project's production domain. Preview copies stay noindex.

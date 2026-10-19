@@ -266,7 +266,7 @@ export default function Home() {
         <div className="wrap ins">
           <div>
             <h2 className="h2">Insurance we take</h2>
-            <p>Most major plans. Not on the list? Call and we&rsquo;ll check yours.</p>
+            <p>Most major plans. Some are still being finalized for opening day, so call and we&rsquo;ll check yours.</p>
           </div>
           <ul className="ins__list">
             {INSURANCE.map((i) => (

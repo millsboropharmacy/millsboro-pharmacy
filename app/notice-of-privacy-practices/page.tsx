@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/notice-of-privacy-practices" },
 };
 
-const NPP_EFFECTIVE = "November 2, 2026";
+const NPP_EFFECTIVE = "October 2, 2026";
 const PRIVACY_OFFICER = "Dhruv Patel, PharmD, Privacy Officer";
 
 export default function NoticePage() {

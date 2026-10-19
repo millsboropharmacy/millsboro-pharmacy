@@ -45,7 +45,7 @@ export const TRANSFER_FORM_URL = "";
 
 // HIPAA requires the pharmacy's Notice of Privacy Practices to be posted on its website.
 // Put the PDF in /public (e.g. /notice-of-privacy-practices.pdf) and set the path here.
-export const NPP_URL = "";
+export const NPP_URL = "/notice-of-privacy-practices";
 
 // Same idea for refills: the secure form's embed URL, or Rx30's refill app link.
 export const REFILL_FORM_URL = "";

@@ -19,7 +19,7 @@ The site does not collect patient data. Set `TRANSFER_FORM_URL` in `lib/site.ts`
 The old site's `app/api/send` route (Resend to Gmail with license and insurance photos) is intentionally gone. Remove the `RESEND_API` env var from Vercel when this goes live.
 
 ## Before launch
-- **Required (HIPAA):** post the pharmacy's Notice of Privacy Practices (Dhruv is sending the Rx30 one). Drop the PDF in `public/` and set `NPP_URL` in `lib/site.ts`; it then links from the footer and the Privacy Policy.
+- **HIPAA Notice of Privacy Practices:** drafted from the HHS model notice (Feb 2026, includes Part 2), live at `/notice-of-privacy-practices` with a print PDF at `public/notice-of-privacy-practices.pdf`. Privacy Officer: Dhruv. Effective Nov 2, 2026. Have the PSAO/compliance contact review it. If the page text changes, regenerate the PDF (print the page to PDF).
 - Remove the opening banner after Nov 2, 2026 (`openingNote` / `openingDate` in `lib/site.ts`, and the opening card on the home page).
 - Confirm the insurance list with Dhruv.
 - Confirm Saturday hours (old site said "9am - 3am"; this uses 9am to 3pm).

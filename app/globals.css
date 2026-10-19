@@ -1463,6 +1463,110 @@ address {
   margin-bottom: 10px;
 }
 
+/* notice of privacy practices */
+.npp h3 {
+  font-family: var(--ui);
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin: 22px 0 6px;
+}
+.npp-lead {
+  font-size: 1.1rem;
+}
+.npp-contact {
+  background: var(--mist);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin: 18px 0;
+}
+.npp-print-head,
+.npp-foot {
+  display: none;
+}
+
+@media print {
+  @page {
+    size: letter;
+    margin: 0.55in 0.6in;
+  }
+  .site-header,
+  .footer,
+  .mbar,
+  .skip,
+  .npp-screen-only {
+    display: none !important;
+  }
+  body {
+    font-size: 10pt;
+    line-height: 1.38;
+    padding: 0 !important;
+  }
+  .npp-section {
+    padding: 0 !important;
+  }
+  .wrap {
+    max-width: none;
+    padding: 0;
+  }
+  .npp-print-head {
+    display: block;
+    border-bottom: 3px solid #c0212b;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+  }
+  .npp-print-head strong {
+    font-size: 15pt;
+    color: #1b3a6b;
+    margin-right: 10px;
+  }
+  .npp-print-head span {
+    font-size: 9.5pt;
+    color: #56627a;
+  }
+  .npp-print-head h1 {
+    font-size: 20pt;
+    margin: 6px 0 0;
+  }
+  .legal h2 {
+    font-size: 13.5pt;
+    margin: 16px 0 6px;
+    break-after: avoid;
+  }
+  .npp h3 {
+    font-size: 10.5pt;
+    margin: 10px 0 3px;
+    break-after: avoid;
+  }
+  .legal li {
+    margin-bottom: 3px;
+    break-inside: avoid;
+  }
+  .npp ul {
+    break-before: avoid;
+  }
+  .npp p,
+  .npp li {
+    orphans: 3;
+    widows: 3;
+  }
+  .npp-contact {
+    border: 1px solid #d9dfe8;
+    padding: 10px 12px;
+  }
+  .npp-foot {
+    display: none;
+    margin-top: 18px;
+    padding-top: 8px;
+    border-top: 1px solid #d9dfe8;
+    font-size: 8.5pt;
+    color: #56627a;
+  }
+  .fx .fx-item {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 /* responsive */
 @media (max-width: 1020px) {
   .nav__links {

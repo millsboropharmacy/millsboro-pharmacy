@@ -29,7 +29,7 @@ export default function PrivacyPage() {
             that explains how we may use and share it and what your rights are.{" "}
             {NPP_URL ? (
               <>
-                <a href={NPP_URL}>Read our Notice of Privacy Practices</a>, or ask for a printed copy at
+                <a href={NPP_URL}>Read our Notice of Privacy Practices</a> (<a href="/notice-of-privacy-practices.pdf">PDF</a>), or ask for a printed copy at
                 the counter.
               </>
             ) : (

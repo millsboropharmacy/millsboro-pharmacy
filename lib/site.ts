@@ -29,7 +29,7 @@ export const BIZ = {
   },
   // Opened November 2, 2026. Shown in the top bar and the home page card.
   openingNote: "Now open in BJ's Plaza",
-  openingDate: "Now open in BJ's Plaza",
+  openingDate: "Now open",
   plaza: "BJ's Plaza",
   socials: [
     { label: "Facebook", url: "https://www.facebook.com/share/1Es1U3mqRW/" },

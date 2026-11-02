@@ -18,8 +18,7 @@ export const BIZ = {
   state: "DE",
   stateFull: "Delaware",
   zip: "19966",
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Millsboro+Pharmacy+26670+Centerview+Dr+Unit+9+Millsboro+DE+19966",
+  mapsUrl: "https://maps.app.goo.gl/YozZpwwjiPebir897",
   mapsEmbed:
     "https://maps.google.com/maps?q=26670%20Centerview%20Dr%20Unit%209%2C%20Millsboro%2C%20DE%2019966&z=15&output=embed",
   calendly:
@@ -28,13 +27,14 @@ export const BIZ = {
     name: "Dhruv Patel, PharmD",
     short: "Dhruv",
   },
-  // From the pharmacy's own Instagram post. Set openingNote/openingDate to "" once open.
-  openingNote: "Opening November 2, 2026 in BJ's Plaza",
-  openingDate: "November 2, 2026",
+  // Opened November 2, 2026. Shown in the top bar and the home page card.
+  openingNote: "Now open in BJ's Plaza",
+  openingDate: "Now open in BJ's Plaza",
   plaza: "BJ's Plaza",
   socials: [
     { label: "Facebook", url: "https://www.facebook.com/share/1Es1U3mqRW/" },
     { label: "Instagram", url: "https://www.instagram.com/millsboropharmacy/" },
+    { label: "Google", url: "https://maps.app.goo.gl/YozZpwwjiPebir897" },
   ] as { label: string; url: string }[],
 };
 
@@ -242,21 +242,21 @@ export const SERVICES: Service[] = [
   {
     slug: "compounding",
     icon: "flask",
-    name: "Non-sterile compounding",
+    name: "Basic compounding",
     nav: "Compounding",
-    title: "Compounding Pharmacy in Millsboro, DE",
+    title: "Compounding and Reconstitution in Millsboro, DE",
     description:
-      "Custom capsules, topical creams and oral suspensions made at Millsboro Pharmacy. Special orders usually arrive the next day.",
-    h1: "Compounded medications made for you",
-    blurb: "Custom capsules, creams and liquids. Special orders usually next day.",
+      "Basic non-sterile compounding at Millsboro Pharmacy in Millsboro, DE, including reconstituting liquid antibiotics. Call (302) 297-5345.",
+    h1: "Basic compounding, done right here",
+    blurb: "Basic non-sterile compounding, like mixing liquid antibiotics.",
     body: [
-      "When the standard version of a medication doesn't work for you, we can make it in a different form. That includes custom capsules, topical creams and oral suspensions.",
-      "Special orders usually arrive the next day. Your doctor can send the prescription to us directly, or call us to talk it through.",
+      "We do basic non-sterile compounding at the counter, like reconstituting (mixing) liquid antibiotics and other medications that need to be prepared before you take them.",
+      "We don't make custom creams or capsules. If your prescription needs that, give us a call and we'll point you in the right direction.",
     ],
     faqs: [
       {
-        q: "What can you compound?",
-        a: "We do non-sterile compounding, including custom capsules, topical creams and oral suspensions. Call us with your prescription and we'll let you know.",
+        q: "What kind of compounding do you do?",
+        a: "Basic non-sterile compounding, like reconstituting liquid antibiotics and other medications that are mixed before pickup. We don't make custom creams or capsules. Call us with your prescription and we'll let you know.",
       },
     ],
     cta: "call",

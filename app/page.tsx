@@ -34,13 +34,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="opening" aria-label="Opening date and location">
+      <section className="opening" aria-label="Now open and location">
         <div className="wrap">
           <div className="opening__card">
             <div className="opening__item">
               <Icon name="calendar" size={64} />
               <div>
-                <span className="opening__label">Opening</span>
                 <strong className="opening__big">{BIZ.openingDate}</strong>
               </div>
             </div>

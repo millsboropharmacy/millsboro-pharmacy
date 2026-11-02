@@ -34,13 +34,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="opening" aria-label="Opening date and location">
+      <section className="opening" aria-label="Now open and location">
         <div className="wrap">
           <div className="opening__card">
             <div className="opening__item">
               <Icon name="calendar" size={64} />
               <div>
-                <span className="opening__label">Opening</span>
                 <strong className="opening__big">{BIZ.openingDate}</strong>
               </div>
             </div>
@@ -266,7 +265,7 @@ export default function Home() {
         <div className="wrap ins">
           <div>
             <h2 className="h2">Insurance we take</h2>
-            <p>Most major plans. Some are still being finalized for opening day, so call and we&rsquo;ll check yours.</p>
+            <p>Most major plans. Some plans are still being finalized. Call and we&rsquo;ll check yours.</p>
           </div>
           <ul className="ins__list">
             {INSURANCE.map((i) => (

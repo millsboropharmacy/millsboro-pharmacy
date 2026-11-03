@@ -46,7 +46,7 @@ export default function Home() {
             <a href={BIZ.mapsUrl} className="opening__item" target="_blank" rel="noopener">
               <Icon name="pin" size={64} />
               <div>
-                <strong className="opening__place">Located in {BIZ.plaza}</strong>
+                <strong className="opening__place">Find us</strong>
                 <span className="opening__sub">
                   {BIZ.street}, {BIZ.city}, {BIZ.state}
                 </span>

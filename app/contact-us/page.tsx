@@ -14,7 +14,7 @@ export default function ContactPage() {
     <>
       <PageHero
         title="Visit or call Millsboro Pharmacy"
-        lede="We're in BJ's Plaza at 26670 Centerview Dr, Unit 9, in Millsboro. Call, fax, email or just stop in."
+        lede="We're at 26670 Centerview Dr, Unit 9, in Millsboro. Call, fax, email or just stop in."
         crumbs={[{ name: "Contact", path: "/contact-us" }]}
       />
 

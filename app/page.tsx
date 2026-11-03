@@ -1,8 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import { HeroArt, StepIcon } from "@/components/Art";
 import { Icon } from "@/components/Icons";
 import { FaqList } from "@/components/Faq";
-import { BIZ, HOME_FAQS, HOURS, INSURANCE, SERVICES } from "@/lib/site";
+import { BIZ, HOME_FAQS, HOURS, INSURANCE, PHOTOS, SERVICES } from "@/lib/site";
 
 export default function Home() {
   return (
@@ -44,7 +45,15 @@ export default function Home() {
               </div>
             </div>
             <a href={BIZ.mapsUrl} className="opening__item" target="_blank" rel="noopener">
-              <Icon name="pin" size={64} />
+              <Image
+                className="opening__photo"
+                src={PHOTOS.storefront.src}
+                alt={PHOTOS.storefront.alt}
+                width={PHOTOS.storefront.width}
+                height={PHOTOS.storefront.height}
+                loading="lazy"
+                sizes="96px"
+              />
               <div>
                 <strong className="opening__place">Find us</strong>
                 <span className="opening__sub">
@@ -225,6 +234,15 @@ export default function Home() {
             <span>Yours.</span>
           </h2>
           <div>
+            <Image
+              className="indie__photo"
+              src={PHOTOS.aisleWindows.src}
+              alt={PHOTOS.aisleWindows.alt}
+              width={PHOTOS.aisleWindows.width}
+              height={PHOTOS.aisleWindows.height}
+              loading="lazy"
+              sizes="(max-width: 900px) 90vw, 540px"
+            />
             <p className="indie__p">
               Millsboro Pharmacy is built by people who live here, for people who live here. No distant
               corporate office decides how we serve you. Every decision is made with this community in

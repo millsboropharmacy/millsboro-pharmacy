@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { StepIcon } from "@/components/Art";
 import { FaqList } from "@/components/Faq";
 import { PageHero } from "@/components/PageHero";
-import { BIZ, TRANSFER_FAQS, TRANSFER_FORM_URL } from "@/lib/site";
+import { BIZ, PHOTOS, TRANSFER_FAQS, TRANSFER_FORM_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: { absolute: "Transfer Your Prescription to Millsboro Pharmacy" },
@@ -15,6 +15,7 @@ export default function TransferPage() {
   return (
     <>
       <PageHero
+        photo={PHOTOS.counter}
         title="Transfer your prescriptions to Millsboro Pharmacy"
         lede="Give us a few details and we take it from there. We call your old pharmacy, check your insurance and let you know when everything's ready, usually the same day."
         crumbs={[{ name: "Transfer Rx", path: "/transfer" }]}

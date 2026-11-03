@@ -1046,6 +1046,36 @@ address {
   opacity: 0.97;
   box-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.6);
 }
+.phero__photo {
+  position: absolute;
+  right: 6%;
+  top: 50%;
+  translate: 0 -50%;
+  width: 260px;
+}
+.phero__photo img,
+.indie__photo,
+.opening__photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+.phero__photo img {
+  aspect-ratio: 4 / 5;
+  box-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.6);
+}
+.indie__photo {
+  aspect-ratio: 4 / 3;
+  margin-bottom: 24px;
+}
+.opening__photo {
+  width: 72px;
+  height: 92px;
+  flex: none;
+  border-radius: 10px;
+}
 .phero__shape svg {
   width: 62%;
   height: auto;
@@ -1741,6 +1771,19 @@ address {
   .svc-index,
   .towns {
     grid-template-columns: 1fr;
+  }
+  .phero--photo {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .phero--photo .phero__photo {
+    position: static;
+    translate: none;
+    width: auto;
+    margin: 0 24px 48px;
+  }
+  .phero--photo .phero__photo img {
+    aspect-ratio: 4 / 3;
   }
   .phero__shape {
     display: none;

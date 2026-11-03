@@ -40,6 +40,7 @@ export default async function ServicePage({ params }: Props) {
       <PageHero
         title={s.h1}
         lede={s.blurb}
+        photo={s.photo}
         crumbs={[
           { name: "Services", path: "/services" },
           { name: s.name, path: `/services/${s.slug}` },

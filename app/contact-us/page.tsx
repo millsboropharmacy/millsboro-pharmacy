@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
-import { BIZ, HOURS, INSURANCE } from "@/lib/site";
+import { BIZ, HOURS, INSURANCE, PHOTOS } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: { absolute: "Contact Millsboro Pharmacy | Hours and Directions" },
@@ -13,6 +13,7 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
+        photo={PHOTOS.storefront}
         title="Visit or call Millsboro Pharmacy"
         lede="We're at 26670 Centerview Dr, Unit 9, in Millsboro. Call, fax, email or just stop in."
         crumbs={[{ name: "Contact", path: "/contact-us" }]}

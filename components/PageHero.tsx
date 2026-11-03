@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import type { Photo } from "@/lib/site";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "./JsonLd";
 import { LogoMark } from "./Logo";
@@ -10,18 +12,26 @@ export function PageHero({
   lede,
   crumbs,
   children,
+  photo,
 }: {
   title: string;
   lede?: string;
   crumbs: Crumb[];
   children?: React.ReactNode;
+  photo?: Photo;
 }) {
   const all = [{ name: "Home", path: "/" }, ...crumbs];
   return (
-    <section className="phero">
-      <div className="phero__shape" aria-hidden="true">
-        <LogoMark size={220} />
-      </div>
+    <section className={photo ? "phero phero--photo" : "phero"}>
+      {photo ? (
+        <div className="phero__photo">
+          <Image src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} loading="lazy" sizes="(max-width: 900px) 90vw, 300px" />
+        </div>
+      ) : (
+        <div className="phero__shape" aria-hidden="true">
+          <LogoMark size={220} />
+        </div>
+      )}
       <div className="wrap phero__inner">
         <nav className="crumbs" aria-label="Breadcrumb">
           {all.map((c, i) => (

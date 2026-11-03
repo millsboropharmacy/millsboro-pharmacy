@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { FaqList } from "@/components/Faq";
 import { PageHero } from "@/components/PageHero";
-import { BIZ, HOURS, REFILL_FAQS, REFILL_FORM_URL } from "@/lib/site";
+import { BIZ, HOURS, PHOTOS, REFILL_FAQS, REFILL_FORM_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: { absolute: "Refill a Prescription at Millsboro Pharmacy" },
@@ -15,6 +15,7 @@ export default function RefillPage() {
   return (
     <>
       <PageHero
+        photo={PHOTOS.counter}
         title="Refill a prescription"
         lede="Call us with your prescription number and we'll have it ready for pickup or bring it to you. Most in-stock refills take under 15 minutes."
         crumbs={[{ name: "Refill", path: "/refill" }]}

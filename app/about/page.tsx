@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
+import { PHOTOS } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: { absolute: "About Millsboro Pharmacy | Locally Owned in Millsboro, DE" },
@@ -13,6 +14,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
+        photo={PHOTOS.aisleWindows}
         title="A pharmacy owned by the people behind the counter"
         lede="Millsboro Pharmacy is independent. There's no parent company and no distant office setting quotas. The owners fill your prescriptions."
         crumbs={[{ name: "About", path: "/about" }]}

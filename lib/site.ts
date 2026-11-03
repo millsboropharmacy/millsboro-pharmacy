@@ -90,6 +90,42 @@ export const INSURANCE = [
   "Workers' Comp",
 ];
 
+export type Photo = { src: string; alt: string; width: number; height: number };
+
+// Store photos in /public/photos (WebP, max 1600px wide). No people in any photo.
+export const PHOTOS = {
+  storefront: {
+    src: "/photos/storefront.webp",
+    alt: "Millsboro Pharmacy storefront on Centerview Dr, Unit 9",
+    width: 1086,
+    height: 1448,
+  },
+  counter: {
+    src: "/photos/counter.webp",
+    alt: "Pick up and drop off counter inside Millsboro Pharmacy",
+    width: 1600,
+    height: 2133,
+  },
+  aisleWindows: {
+    src: "/photos/aisle-windows.webp",
+    alt: "Bright aisles of health and wellness products inside Millsboro Pharmacy",
+    width: 1600,
+    height: 2133,
+  },
+  aisleConsult: {
+    src: "/photos/aisle-consult.webp",
+    alt: "Store aisle at Millsboro Pharmacy with the private consult area door",
+    width: 1600,
+    height: 2133,
+  },
+  coldAllergy: {
+    src: "/photos/cold-allergy.webp",
+    alt: "Cold, cough and allergy medicine shelf at Millsboro Pharmacy",
+    width: 1600,
+    height: 2133,
+  },
+} satisfies Record<string, Photo>;
+
 export type Faq = { q: string; a: string };
 
 export type Service = {
@@ -105,6 +141,7 @@ export type Service = {
   faqs: Faq[];
   cta?: "transfer" | "book" | "call";
   icon: import("@/components/Icons").IconName;
+  photo?: Photo;
 };
 
 export const SERVICES: Service[] = [
@@ -142,6 +179,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "vaccines",
+    photo: PHOTOS.aisleConsult,
     icon: "syringe",
     name: "Vaccines and immunizations",
     nav: "Vaccines",
@@ -306,6 +344,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "otc-and-minor-ailments",
+    photo: PHOTOS.coldAllergy,
     icon: "chat",
     name: "Over-the-counter advice",
     nav: "OTC advice",
@@ -350,6 +389,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "medication-reviews",
+    photo: PHOTOS.aisleConsult,
     icon: "review",
     name: "Medication reviews (MTM)",
     nav: "Med reviews",

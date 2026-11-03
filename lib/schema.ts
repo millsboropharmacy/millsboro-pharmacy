@@ -1,4 +1,4 @@
-import { BIZ, HOURS, SERVICES, SITE_URL, type Faq } from "./site";
+import { BIZ, HOURS, PHOTOS, SERVICES, SITE_URL, type Faq } from "./site";
 
 export const PHARMACY_ID = `${SITE_URL}/#pharmacy`;
 
@@ -10,7 +10,7 @@ export function pharmacySchema() {
     name: BIZ.name,
     url: SITE_URL,
     logo: `${SITE_URL}/icon.svg`,
-    image: `${SITE_URL}/opengraph-image`,
+    image: `${SITE_URL}${PHOTOS.storefront.src}`,
     telephone: BIZ.phoneE164,
     faxNumber: BIZ.faxE164,
     email: BIZ.email,
